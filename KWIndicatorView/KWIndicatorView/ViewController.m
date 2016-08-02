@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "KWIndicatorView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet KWIndicatorView *pulseView;
 
 @end
 
@@ -22,6 +24,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)didTapPulse:(id)sender {
+    [self.pulseView pulse];
 }
 
 @end

@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +18,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-Eh-Bur" customClass="KWIndicatorView">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Qnt-GD-9or"/>
+                                    <constraint firstAttribute="width" secondItem="fX9-Eh-Bur" secondAttribute="height" multiplier="1:1" id="aDt-uN-EjZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPulses">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseDuration">
+                                        <real key="value" value="1.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pulseScale">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="pulseColor">
+                                        <color key="value" red="0.55686277149999996" green="0.26666668059999998" blue="0.6784313917" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="viewColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aok-jv-OKp">
+                                <rect key="frame" x="20" y="143" width="38" height="30"/>
+                                <color key="backgroundColor" red="0.18431372940540314" green="0.80000001192092896" blue="0.43921568989753723" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pulse">
+                                    <color key="titleColor" red="0.86666667461395264" green="0.87843137979507446" blue="0.88627451658248901" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPulse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pp1-CW-Rqc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="fX9-Eh-Bur" secondAttribute="leading" id="8z2-IG-RFU"/>
+                            <constraint firstItem="aok-jv-OKp" firstAttribute="leading" secondItem="fX9-Eh-Bur" secondAttribute="leading" id="FB6-jE-Ira"/>
+                            <constraint firstItem="fX9-Eh-Bur" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="L55-1u-pov"/>
+                            <constraint firstItem="aok-jv-OKp" firstAttribute="top" secondItem="fX9-Eh-Bur" secondAttribute="bottom" constant="73" id="Srk-VW-2f3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pulseView" destination="fX9-Eh-Bur" id="vtw-t9-GCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

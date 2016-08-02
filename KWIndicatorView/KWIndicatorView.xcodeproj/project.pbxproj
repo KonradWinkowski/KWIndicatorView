@@ -13,6 +13,7 @@
 		FC45F4221D50D90400D95312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC45F4201D50D90400D95312 /* Main.storyboard */; };
 		FC45F4241D50D90400D95312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC45F4231D50D90400D95312 /* Assets.xcassets */; };
 		FC45F4271D50D90400D95312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC45F4251D50D90400D95312 /* LaunchScreen.storyboard */; };
+		FC45F4301D50D99B00D95312 /* KWIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC45F42F1D50D99B00D95312 /* KWIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FC45F4231D50D90400D95312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC45F4261D50D90400D95312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC45F4281D50D90400D95312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC45F42E1D50D99B00D95312 /* KWIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWIndicatorView.h; sourceTree = "<group>"; };
+		FC45F42F1D50D99B00D95312 /* KWIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				FC45F4251D50D90400D95312 /* LaunchScreen.storyboard */,
 				FC45F4281D50D90400D95312 /* Info.plist */,
 				FC45F4171D50D90400D95312 /* Supporting Files */,
+				FC45F42E1D50D99B00D95312 /* KWIndicatorView.h */,
+				FC45F42F1D50D99B00D95312 /* KWIndicatorView.m */,
 			);
 			path = KWIndicatorView;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				FC45F41F1D50D90400D95312 /* ViewController.m in Sources */,
 				FC45F41C1D50D90400D95312 /* AppDelegate.m in Sources */,
+				FC45F4301D50D99B00D95312 /* KWIndicatorView.m in Sources */,
 				FC45F4191D50D90400D95312 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
